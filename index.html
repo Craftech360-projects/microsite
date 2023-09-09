@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head>
+  <title>Microsite</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+  <link href="/asset/styles.css" rel="stylesheet">
+
+  <style>
+    @font-face {
+      font-family: 'Myriad';
+      src: url('./asset/MyriadPro-Regular.woff') format('woff'),
+
+    }
+
+    body {
+ 
+      font-family: Myriad, sans-serif;
+      font-weight: normal;
+      font-style: normal;
+      background-color: #2853dd;
+    }
+  </style>
+</head>
+<body>
+  <div class="w-screen">
+    <img src="./asset/Group 1.png" alt="" class="max-w-full h-auto object-cover w-screen">
+  </div>
+  <div id="body" class="bg-cover  w-screen bg-blue flex justify-center items-start h-screen ">
+
+    <form action="/send-email" method="POST">
+
+      <h1 class="mb-8 text-2xl text-center text-white">Registration Form</h1>
+      <div class="mb-4">
+        <label for="name" class="block text-lg font-bold mb-2 text-white" for="username">
+          Full Name:
+        </label>
+        <input
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          id="name" type="text" placeholder="Full Name" required>
+      </div>
+
+
+      <div class="mb-4">
+        <label for="company" class="block text-lg font-bold mb-2 text-white" for="company">
+          Company:
+        </label>
+        <input
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          id="company" type="text" placeholder="Company" required>
+      </div>
+
+      <div class="mb-4">
+        <label for="designation" class="block text-lg font-bold mb-2 text-white" for="designation">
+          Designation :
+        </label>
+        <input
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          id="designation" type="text" placeholder="Designation" required>
+      </div>
+
+      <div class="mb-4">
+        <label for="phone" class="block text-lg font-bold mb-2 text-white" for="phone">
+          Phone Number:
+        </label>
+        <input
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          id="phone" type="text" placeholder="Phone Number" required>
+      </div>
+
+      <div class="mb-4">
+        <label for="email" class="block text-lg font-bold mb-2 text-white" for="email">
+          Company Email:
+        </label>
+        <input
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          id="email" type="text" placeholder="Company Email" required>
+      </div>
+      <div class="mb-4">
+        <label for="invetation" class="block text-lg font-bold mb-2 text-white" for="invetation">
+          Invitation Received From:
+        </label>
+        <input
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          id="invetation" type="text" placeholder="Invitation Received From" required>
+      </div>
+      
+      <div class="mb-4">
+        <label for="iot" class="block text-lg font-bold mb-2 text-white" for="iot">
+          Areas Of Interest Within IoT:
+        </label>
+        <input
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          id="iot" type="text" placeholder="Areas Of Interest Within IoT" required>
+      </div>
+      <input type="submit" value="Submit" id="button" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+
+    </form>
+  </div>
+</body>
+
+</html>

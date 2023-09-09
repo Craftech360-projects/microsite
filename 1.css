@@ -1,0 +1,127 @@
+/* body {
+      background-color: #333;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      padding: 10px;
+      min-height: 100vh;
+      background-image: url('./asset/intel.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+    } */
+/* 
+    #body {
+      width: 100%;
+      max-width: 400px; 
+      margin: 0 auto;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.8);
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+
+    @media (max-width: 600px) {
+      #body {
+        padding: 10px;
+      }
+      
+      input[type="text"],
+      input[type="tel"],
+      input[type="email"] {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+      
+      input[type="submit"] {
+        width: 100%;
+      }
+    }
+
+    body {
+      background-color: #333;
+     
+      color: #fff;
+    
+      font-family: Arial, sans-serif;
+      margin: 10px;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      width: 1800px;
+      background-image: url('/asset/main.jpg');
+      overflow: hidden;
+      background-repeat: no-repeat;
+    }
+
+    #body {
+      width: 23%;
+      position: relative;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.8);
+    
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    
+      margin: 0 auto;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    form {
+      margin-top: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"] {
+      width: 90%;
+      padding: 10px;
+      margin-bottom: 10px;
+      background-color: rgba(255, 255, 255, 0.1);
+     
+      border: none;
+      border-radius: 3px;
+      color: #fff;
+    } */
+
+    /* input[type="submit"] {
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    } */
+
+    /* input[type="submit"]:hover {
+      background-color: #0056b3;
+    } */
+/* 
+    label[for="name"],
+    label[for="company"],
+    label[for="designation"],
+    label[for="phone"],
+    label[for="email"],
+    label[for="invetatiom"],
+    label[for="iot"] {
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 5px;
+      border-radius: 3px;
+    } */
+    /* #button
+    {
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    } */
