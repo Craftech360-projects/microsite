@@ -38,7 +38,7 @@
         </label>
         <input
           class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-          id="name" type="text" placeholder="Full Name" required>
+          id="name" type="text" placeholder="Full Name" required name="name">
       </div>
 
 
@@ -66,16 +66,16 @@
         </label>
         <input
           class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-          id="phone" type="text" placeholder="Phone Number" required>
+          id="phone" type="text" placeholder="Phone Number" required name="phone">
       </div>
 
       <div class="mb-4">
-        <label for="email" class="block text-lg font-bold mb-2 text-white" for="email">
+        <label for="email" class="block text-lg font-bold mb-2 text-white" >
           Company Email:
         </label>
         <input
           class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-          id="email" type="text" placeholder="Company Email" required>
+          id="email" type="text" placeholder="Company Email" required name="email">
       </div>
       <div class="mb-4">
         <label for="invetation" class="block text-lg font-bold mb-2 text-white" for="invetation">
@@ -94,10 +94,13 @@
           class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
           id="iot" type="text" placeholder="Areas Of Interest Within IoT" required>
       </div>
-      <input type="submit" value="Submit" id="button" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+      <div>
+        <input type="checkbox" required > <hI class="text-white">  I accept the terms</hI>
+      </div>
 
+      <input type="submit" value="Submit" id="button" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+    </div>
     </form>
   </div>
 </body>
-
 </html>

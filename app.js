@@ -54,7 +54,7 @@ app.post('/send-email', (req, res) => {
         email: email,
         phone: phone,
     });
-
+console.log('1st email',email);
 
     newData.save()
         .then(() => {
@@ -71,7 +71,7 @@ app.post('/send-email', (req, res) => {
         end: new Date(new Date().getTime() + 3600000),
         summary: 'Meeting Invitation',
         description: 'This is a meeting invitation.',
-        organizer: 'Qualcomm',
+        organizer: 'Qualcomm <yourcompany@example.com>',
         location: 'Meeting Location',
     });
 
@@ -89,10 +89,11 @@ app.post('/send-email', (req, res) => {
 
         }
     });
-
+  console.log(email);
     var mailOptions = {
         from: 'apoorva@craftech360.com',
         to: email,
+
         subject: 'Meeting Invitation',
         text: `Hello ${name},\n\nThank you for reaching out to us. We have received your contact information:\nEmail: ${email}\nPhone: ${phone}\n\nBest regards,\nYour Company`,
         attachments: [
@@ -120,3 +121,9 @@ app.post('/send-email', (req, res) => {
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
 });
+
+
+
+
+
+    
