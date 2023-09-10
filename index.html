@@ -15,7 +15,7 @@
     }
 
     body {
- 
+
       font-family: Myriad, sans-serif;
       font-weight: normal;
       font-style: normal;
@@ -23,6 +23,7 @@
     }
   </style>
 </head>
+
 <body>
   <div class="w-screen">
     <img src="./asset/Group 1.png" alt="" class="max-w-full h-auto object-cover w-screen">
@@ -33,74 +34,106 @@
 
       <h1 class="mb-8 text-2xl text-center text-white">Registration Form</h1>
       <div class="mb-4">
-        <label for="name" class="block text-lg font-bold mb-2 text-white" for="username">
+        <label for="name" class="block text-lg font-bold mb-2 text-white">
           Full Name:
         </label>
         <input
-          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          class="shadow appearance-none border rounded  py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-80 xl:w-96 md:w-96"
           id="name" type="text" placeholder="Full Name" required name="name">
       </div>
 
 
       <div class="mb-4">
-        <label for="company" class="block text-lg font-bold mb-2 text-white" for="company">
+        <label for="company" class="block text-lg font-bold mb-2 text-white">
           Company:
         </label>
         <input
-          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-          id="company" type="text" placeholder="Company" required>
+          class="shadow appearance-none border rounded  py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-80 xl:w-96 md:w-96"
+          id="company" type="text" placeholder="Company" required name="company">
       </div>
 
       <div class="mb-4">
-        <label for="designation" class="block text-lg font-bold mb-2 text-white" for="designation">
+        <label for="designation" class="block text-lg font-bold mb-2 text-white">
           Designation :
         </label>
         <input
-          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-          id="designation" type="text" placeholder="Designation" required>
+          class="shadow appearance-none border rounded  py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-80 xl:w-96 md:w-96"
+          id="designation" type="text" placeholder="Designation" name="designation" required>
       </div>
 
       <div class="mb-4">
-        <label for="phone" class="block text-lg font-bold mb-2 text-white" for="phone">
+        <label for="phone" class="block text-lg font-bold mb-2 text-white">
           Phone Number:
         </label>
         <input
-          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          class="shadow appearance-none border rounded  py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-80 xl:w-96 md:w-96"
           id="phone" type="text" placeholder="Phone Number" required name="phone">
       </div>
 
       <div class="mb-4">
-        <label for="email" class="block text-lg font-bold mb-2 text-white" >
+        <label for="email" class="block text-lg font-bold mb-2 text-white">
           Company Email:
         </label>
         <input
-          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          class="shadow appearance-none border rounded  py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-80 xl:w-96 md:w-96"
           id="email" type="text" placeholder="Company Email" required name="email">
       </div>
       <div class="mb-4">
-        <label for="invetation" class="block text-lg font-bold mb-2 text-white" for="invetation">
+        <label for="invitation" class="block text-lg font-bold mb-2 text-white">
           Invitation Received From:
         </label>
         <input
-          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-          id="invetation" type="text" placeholder="Invitation Received From" required>
+          class="shadow appearance-none border rounded  py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-80 xl:w-96 md:w-96"
+          id="invitation" type="text" placeholder="Invitation Received From" name="invtation" required>
       </div>
-      
+
       <div class="mb-4">
-        <label for="iot" class="block text-lg font-bold mb-2 text-white" for="iot">
+        <label for="iot" class="block text-lg font-bold mb-2 text-white">
           Areas Of Interest Within IoT:
         </label>
         <input
-          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-          id="iot" type="text" placeholder="Areas Of Interest Within IoT" required>
+          class="shadow appearance-none border rounded  py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-80 xl:w-96 md:w-96"
+          id="iot" type="text" placeholder="Areas Of Interest Within IoT" name="iot" required>
       </div>
       <div>
-        <input type="checkbox" required > <hI class="text-white">  I accept the terms</hI>
+        <input type="checkbox" required>
+        <p class="xl:w-96 md:w-96 w-80 text-white"> I, <span id="userNamePlaceholder">[Your Name]</span>, hereby grant explicit
+          consent to <span id="userCompanyPlaceholder">[Your Company/Organization]</span> for the collection,
+          storage, and processing of my personal data for the purposes
+          outlined in the Privacy Policy. I understand that this data may
+          include but is not limited to information such as my name,
+          email address, contact details, and any other data provided by
+          me voluntarily.
+          I acknowledge that I have read
+          understood the Privacy Policy,
+          and I am aware of my rights regarding my personal data as described therein.</p>
       </div>
 
-      <input type="submit" value="Submit" id="button" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
-    </div>
-    </form>
+
+      <input type="submit" value="Submit" id="button"
+      class="shadow appearance-none border rounded w-80 xl:w-96 md:w-96 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
   </div>
+
+
+ 
+  </form>
+
+  <script>
+    function updateUserName() {
+      const nameInput = document.getElementById("name");
+      const userNamePlaceholder = document.getElementById("userNamePlaceholder");
+      userNamePlaceholder.textContent = nameInput.value || "[Your Name]";
+    }
+    document.getElementById("name").addEventListener("input", updateUserName);
+
+    function updateCompany() {
+      const nameInput = document.getElementById("company");
+      const userNamePlaceholder = document.getElementById("userCompanyPlaceholder");
+      userNamePlaceholder.textContent = nameInput.value || "[Your Company/Organization]";
+    }
+    document.getElementById("company").addEventListener("input", updateCompany);
+
+  </script>
 </body>
+
 </html>

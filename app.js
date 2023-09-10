@@ -7,6 +7,7 @@ const port = process.env.PORT || 3000;
 const mongoose = require('mongoose');
 
 const ical = require('ical-generator');
+const { log } = require('console');
 
 console.log(typeof (ical));
 
@@ -39,22 +40,32 @@ const dataSchema = new mongoose.Schema({
     name: String,
     email: String,
     phone: String,
+    company: String,
+    designation: String,
+    invitation: String,
+    iot: String,
 });
 
 const Data = mongoose.model('Data', dataSchema);
 
+console.log('database data', Data);
 
 
 app.post('/send-email', (req, res) => {
-    const { name, email, phone } = req.body;
+    const { name, email, phone, company, designation, invitation, iot } = req.body;
 
 
     const newData = new Data({
         name: name,
         email: email,
         phone: phone,
+        company: company,
+        designation: designation,
+        invitation: invitation,
+        iot: iot,
     });
-console.log('1st email',email);
+ 
+    console.log('data going for mongodb', newData);
 
     newData.save()
         .then(() => {
@@ -120,10 +131,4 @@ console.log('1st email',email);
 
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
-});
-
-
-
-
-
-    
+});  
