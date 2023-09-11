@@ -64,7 +64,7 @@ app.post('/send-email', (req, res) => {
         invitation: invitation,
         iot: iot,
     });
- 
+
     console.log('data going for mongodb', newData);
 
     newData.save()
@@ -93,16 +93,20 @@ app.post('/send-email', (req, res) => {
     console.log('iCalendar Content as Buffer:', icsBuffer);
 
     var transporter = nodemailer.createTransport({
-        service: 'Gmail',
+        host: 'smtpout.secureserver.net',
+        // service: 'Godaddy',
+        // secureConnection: false,
+        secure: true,
+        port: 465,
         auth: {
-            user: 'apoorva@craftech360.com',
-            pass: "rlfoybhgcwgrwwsd"
+            user: 'info@event-reg.in',
+            pass: "xb/YQN.G5MC/Ya_"
 
         }
     });
-  console.log(email);
+    console.log(email);
     var mailOptions = {
-        from: 'apoorva@craftech360.com',
+        from: 'info@event-reg.in',
         to: email,
 
         subject: 'Meeting Invitation',
