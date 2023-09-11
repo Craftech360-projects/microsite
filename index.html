@@ -8,15 +8,17 @@
   <link href="/asset/styles.css" rel="stylesheet">
 
   <style>
-    @font-face {
+    /* @font-face {
       font-family: 'Myriad';
       src: url('./asset/MyriadPro-Regular.woff') format('woff'),
 
-    }
+    } */
+
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
 
     body {
 
-      font-family: Myriad, sans-serif;
+      font-family: 'Inter', sans-serif;
       font-weight: normal;
       font-style: normal;
       background-color: #2853dd;
@@ -24,11 +26,17 @@
   </style>
 </head>
 
-<body>
-  <div class="w-screen">
-    <img src="./asset/Group 1.png" alt="" class="max-w-full h-auto object-cover w-screen">
+<body class="overflow-x-hidden pb-8 h-screen">
+  <div class="w-screen ">
+    <div
+      class="flex justify-between px-4 py-2 items-center h-full md:py-4 xl:px-8 bg-white w-screen shadow-2xl shadow-black">
+      <p class="text-xs md:text-2xl xl:text-3xl  text-blue-700 font-bold">Qualcomm Future Tech India</p>
+      <p class="text-xs md:text-2xl xl:text-3xl  text-blue-700 font-bold">Partner Connect | Sept 2023</p>
+    </div>
+    <div class="h-6 bg-blue-400 w-screen shadow-2xl"></div>
+    <!-- <img src="./asset/group3.png" alt="" class="max-w-full h-auto object-cover w-screen"> -->
   </div>
-  <div id="body" class="bg-cover  w-screen bg-blue flex justify-center items-start h-screen ">
+  <div id="body" class="bg-cover  w-screen bg-blue flex justify-center items-start mt-6">
 
     <form action="/send-email" method="POST">
 
@@ -97,7 +105,8 @@
       </div>
       <div>
         <input type="checkbox" required>
-        <p class="xl:w-96 md:w-96 w-80 text-white"> I, <span id="userNamePlaceholder">[Your Name]</span>, hereby grant explicit
+        <p class="xl:w-96 md:w-96 w-80 text-white"> I, <span id="userNamePlaceholder">[Your Name]</span>, hereby grant
+          explicit
           consent to <span id="userCompanyPlaceholder">[Your Company/Organization]</span> for the collection,
           storage, and processing of my personal data for the purposes
           outlined in the Privacy Policy. I understand that this data may
@@ -111,12 +120,13 @@
 
 
       <input type="submit" value="Submit" id="button"
-      class="shadow appearance-none border rounded w-80 xl:w-96 md:w-96 py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+        class="shadow appearance-none border rounded w-80 xl:w-96 md:w-96 py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+    </form>
   </div>
 
 
- 
-  </form>
+
+
 
   <script>
     function updateUserName() {
