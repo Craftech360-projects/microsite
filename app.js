@@ -101,7 +101,6 @@ app.post('/send-email', (req, res) => {
         auth: {
             user: 'info@event-reg.in',
             pass: "xb/YQN.G5MC/Ya_"
-
         }
     });
     console.log(email);

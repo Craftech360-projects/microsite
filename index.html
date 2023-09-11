@@ -26,9 +26,9 @@
 
 <body>
   <div class="w-screen">
-    <img src="./asset/Group 1.png" alt="" class="max-w-full h-auto object-cover w-screen">
+    <img src="./asset/Group 1.png" alt="" class="max-w-full h-auto object-cover w-screen p-0">
   </div>
-  <div id="body" class="bg-cover  w-screen bg-blue flex justify-center items-start h-screen ">
+  <div id="body" class="bg-cover  w-screen bg-blue flex justify-center items-start h-screen overflow-hidden">
 
     <form action="/send-email" method="POST">
 
@@ -54,7 +54,7 @@
 
       <div class="mb-4">
         <label for="designation" class="block text-lg font-bold mb-2 text-white">
-          Designation :
+          Designation:
         </label>
         <input
           class="shadow appearance-none border rounded  py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-80 xl:w-96 md:w-96"
@@ -112,11 +112,12 @@
 
       <input type="submit" value="Submit" id="button"
       class="shadow appearance-none border rounded w-80 xl:w-96 md:w-96 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
-  </div>
+    </form>
+    </div>
 
 
  
-  </form>
+
 
   <script>
     function updateUserName() {
