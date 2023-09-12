@@ -127,7 +127,8 @@ app.post('/send-email', (req, res) => {
             res.send('Error sending email.');
         } else {
             console.log('Email sent: ' + info.response);
-            res.send('Thank you for contacting us! Check your email for confirmation.');
+            // res.send('Thank you for contacting us! Check your email for confirmation.');
+            res.sendFile(path.join(__dirname, 'display.html'));
         }
     });
 });
