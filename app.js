@@ -64,7 +64,7 @@ app.post('/send-email', (req, res) => {
         invitation: invitation,
         iot: iot,
     });
-    res.sendFile(path.join(__dirname, 'display.html'));
+    // res.sendFile(path.join(__dirname, 'display.html'));
     console.log('data going for mongodb', newData);
 
     newData.save()
