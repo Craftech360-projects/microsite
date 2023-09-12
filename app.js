@@ -64,7 +64,7 @@ app.post('/send-email', (req, res) => {
         invitation: invitation,
         iot: iot,
     });
-
+    res.sendFile(path.join(__dirname, 'display.html'));
     console.log('data going for mongodb', newData);
 
     newData.save()
@@ -107,7 +107,7 @@ app.post('/send-email', (req, res) => {
     console.log(email);
     var mailOptions = {
         from: 'info@event-reg.in',
-        to: email,
+        to: 'rohitstories1@gmail.com',
 
         subject: 'Meeting Invitation',
         text: `Hello ${name},\n\nThank you for reaching out to us. We have received your contact information:\nEmail: ${email}\nPhone: ${phone}\n\nBest regards,\nYour Company`,
