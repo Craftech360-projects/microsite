@@ -1,21 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
   <style>
-    img{
+    body {
+      background-image: url(./asset/QC-01.png);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
       width: 100%;
-      height: 99vh;
-      padding: 0;
-      margin: 0;
-      overflow-y: hidden;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    @font-face {
+      font-family: 'Regular';
+      src: url('./asset/QualcommNext-Regular.woff') format('woff'),
+
+    }
+
+    @font-face {
+      font-family: 'Medium';
+      src: url('./asset/QualcommNext-Medium.woff') format('woff'),
+
+    }
+    #first{
+      font-family: 'Regular', sans-serif;
+      font-weight: bold;
+      font-style: normal;
     }
   </style>
 </head>
+
 <body>
-  <!-- <div class="max-w-screen-sm mx-auto"> -->
-    <img src="./asset/endpic.jpg" alt="no image" class="p-0 m-0" >
-  <!-- </div> -->
+  <div class="flex flex-col justify-center items-center h-screen">
+    <div class="text-center">
+    <!-- <img src="./asset/QC-01.png" alt="no image" class="p-0 m-0" > -->
+    <p class="text-xs md:text-2xl xl:text-3xl text-white " id="first">
+      Thank You for registering for
+    </p>
+  </div>
+    <div class="text-center">
+    <p class="text-xs md:text-2xl xl:text-3xl text-white font-bold" id="sec">Qualcomm
+      Future Tech India -
+      Partner Connect, Sept 2023</p>
+    <br>
+  </div>
+  <div class="text-center">
+    <p class="text-xs md:text-2xl xl:text-3xl text-white font-bold" id="third">
+      See you there!
+    </p>
+  </div>
+  </div>
 </body>
+
 </html>

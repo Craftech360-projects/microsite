@@ -14,7 +14,18 @@
 
     } */
 
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+    /* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap'); */
+    @font-face {
+      font-family: 'Regular';
+      src: url('./asset/QualcommNext-Regular.woff') format('woff'),
+
+    }
+
+    @font-face {
+      font-family: 'Medium';
+      src: url('./asset/QualcommNext-Medium.woff') format('woff'),
+
+    }
 
     body {
 
@@ -23,23 +34,78 @@
       font-style: normal;
       background-color: #2853dd;
     }
+
+    #heading {
+      font-family: 'Regular', sans-serif;
+      font-weight: bolder;
+      font-style: normal;
+    }
+
+    #register {
+      font-family: 'medium', sans-serif;
+      font-weight: bold;
+      font-style: normal;
+    }
+
+    label {
+      font-family: 'medium', sans-serif;
+      font-weight: bold;
+      font-style: normal;
+    }
+
+    input {
+      font-family: 'medium', sans-serif;
+      font-weight: thin;
+      font-style: normal;
+    }
+
+    p {
+      font-family: 'medium', sans-serif;
+      font-weight: thin;
+      font-style: normal;
+    }
+
+    #box1 {
+      color: black;
+      /* box-shadow: 0px 0px 10px 0px; */
+      box-shadow: inset 0px -10px 8px -10px #000000;
+    }
+
+    #box2 {
+      color: black;
+      /* box-shadow: 0px 0px 10px 0px; */
+      box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.3);
+      box-shadow: inset 0px -11px 8px -10px #000000;
+     
+      
+    }
+
+    body{
+      color: black;
+      /* box-shadow: 0px 0px 0px 0px; */
+    }
+    
   </style>
 </head>
 
 <body class="overflow-x-hidden pb-8 h-screen">
   <div class="w-screen ">
-    <div class="flex justify-center px-4 py-2 items-center h-full md:py-4 xl:px-8 bg-white w-screen shadow-2xl shadow-black">
-      <p class="text-xs md:text-2xl xl:text-3xl text-blue-700 font-bold">Qualcomm Future Tech India - Partner Connect, Sept 2023</p>
+    <div
+      class="flex justify-center px-4 py-2 items-center h-full md:py-4 xl:px-8 bg-white w-screen  shadow-black shadow-2xl"
+      id="box1">
+      <p class="text-xs md:text-2xl xl:text-3xl text-blue-700 font-bold shadow-2xl shadow-black" id="heading">Qualcomm
+        Future Tech India -
+        Partner Connect, Sept 2023</p>
     </div>
-    
-    <div class="h-6 bg-blue-400 w-screen shadow-2xl"></div>
+
+    <div class="h-6 bg-blue-400 w-screen shadow-2xl" id="box2"></div>
     <!-- <img src="./asset/group3.png" alt="" class="max-w-full h-auto object-cover w-screen"> -->
   </div>
-  <div id="body" class="bg-cover  w-screen bg-blue flex justify-center items-start mt-6">
+  <div id="body" class="bg-cover  w-screen bg-blue flex justify-center items-start mt-6" >
 
     <form action="/send-email" method="POST">
 
-      <h1 class="mb-8 text-2xl text-center text-white">Registration Form</h1>
+      <h1 class="mb-8 text-2xl text-center text-white" id="register">Registration Form</h1>
       <div class="mb-4">
         <label for="name" class="block text-lg font-bold mb-2 text-white">
           Full Name:
@@ -48,7 +114,7 @@
           class="shadow appearance-none border rounded  py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-80 xl:w-96 md:w-96"
           id="name" type="text" placeholder="Full Name" required name="name">
       </div>
-      
+
       <div class="mb-4">
         <label for="company" class="block text-lg font-bold mb-2 text-white">
           Company:
@@ -104,23 +170,26 @@
 
       <div>
         <input type="checkbox" required>
-        <p class="xl:w-96 md:w-96 w-80 text-white">Your privacy is important to us. By checking this box, you agree to receive marketing communications from Qualcomm Technologies, Inc. about its products and innovations.</p>
+        <p class="xl:w-96 md:w-96 w-80 text-white">Your privacy is important to us. By checking this box, you agree to
+          receive marketing communications from Qualcomm Technologies, Inc. about its products and innovations.</p>
       </div>
       <div>
         <input type="checkbox" required>
-        <p class="xl:w-96 md:w-96 w-80 text-white"> I acknowledge that I have read and understood the Privacy Policy, and I am aware of my rights regarding my personal data as described therein
+        <p class="xl:w-96 md:w-96 w-80 text-white"> I acknowledge that I have read and understood the Privacy Policy,
+          and I am aware of my rights regarding my personal data as described therein
 
-          We will process your personal information according to our Privacy Policy:<a href="https://www.qualcomm.com/site/privacy"><u> https://www.qualcomm.com/site/privacy </u></a></p>
+          We will process your personal information according to our Privacy Policy:<a
+            href="https://www.qualcomm.com/site/privacy"><u> https://www.qualcomm.com/site/privacy </u></a></p>
       </div>
 
       <input type="submit" value="Submit" id="button"
         class="shadow appearance-none border rounded w-80 xl:w-96 md:w-96 py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
     </form>
   </div>
-     <!-- rest the script -->
+  <!-- rest the script -->
 
 
-<!-- script ot required -->
+  <!-- script ot required -->
 
 
   <script>
