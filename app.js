@@ -1,19 +1,20 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
+const cors = require('cors');
 const path = require('path');
 const app = express();
 const port = process.env.PORT || 3000;
 const mongoose = require('mongoose');
-
+const dotenv = require('dotenv');
 const ical = require('ical-generator');
 const { log } = require('console');
-
+dotenv.config({ path: '/.env' });
+    require('dotenv').config();
 console.log(typeof (ical));
 
 
-
-
+app.use(cors())
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use('/asset', express.static(path.join(__dirname, 'asset')))
@@ -23,7 +24,7 @@ app.get('/', (req, res) => {
 });
 
 
-const mongo_URI = 'mongodb+srv://SAC:G8BO4x3rWEDFSYqk@cluster0.btu1pyt.mongodb.net/microsite';
+const mongo_URI = process.env.MONGO_DB;
 
 mongoose.connect(mongo_URI, {
     useNewUrlParser: true,
@@ -132,7 +133,6 @@ app.post('/send-email', (req, res) => {
         }
     });
 });
-
 
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
