@@ -16,6 +16,8 @@ console.log(typeof (ical));
 
 app.use(cors())
 
+
+
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use('/asset', express.static(path.join(__dirname, 'asset')))
 
@@ -23,8 +25,7 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html');
 });
 
-
-const mongo_URI = process.env.MONGO_DB;
+const mongo_URI = 'mongodb+srv://SAC:G8BO4x3rWEDFSYqk@cluster0.btu1pyt.mongodb.net/microsite';
 
 mongoose.connect(mongo_URI, {
     useNewUrlParser: true,
