@@ -1,8 +1,10 @@
+
 const express = require('express');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 const cors = require('cors');
 const path = require('path');
+const { DateTime } = require('luxon');
 const app = express();
 const port = process.env.PORT || 3000;
 const mongoose = require('mongoose');
@@ -46,7 +48,10 @@ const dataSchema = new mongoose.Schema({
     designation: String,
     invitation: String,
     iot: String,
+    submissionTime: String,
 });
+
+
 
 const Data = mongoose.model('Data', dataSchema);
 
@@ -56,6 +61,7 @@ console.log('database data', Data);
 app.post('/send-email', (req, res) => {
     const { name, email, phone, company, designation, invitation, iot } = req.body;
 
+    const submissionTime = DateTime.now().setZone('Asia/Kolkata').toISO();
 
     const newData = new Data({
         name: name,
@@ -65,6 +71,7 @@ app.post('/send-email', (req, res) => {
         designation: designation,
         invitation: invitation,
         iot: iot,
+        submissionTime: submissionTime,
     });
     // res.sendFile(path.join(__dirname, 'display.html'));
     console.log('data going for mongodb', newData);
