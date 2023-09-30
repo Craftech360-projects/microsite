@@ -72,16 +72,14 @@
       /* box-shadow: 0px 0px 10px 0px; */
       box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.3);
       box-shadow: inset 0px -11px 8px -10px #000000;
-     
-      
+
+
     }
 
-    body{
+    body {
       color: black;
       /* box-shadow: 0px 0px 0px 0px; */
     }
-    
-
   </style>
 </head>
 
@@ -98,27 +96,27 @@
     <div class="h-6 bg-blue-400 w-screen shadow-2xl" id="box2"></div>
     <!-- <img src="./asset/group3.png" alt="" class="max-w-full h-auto object-cover w-screen"> -->
   </div>
-  <div id="body" class="bg-cover  w-screen bg-blue flex justify-center items-start mt-6" >
+  <div id="body" class="bg-cover  w-screen bg-blue flex justify-center items-start mt-6">
 
     <form action="/send-email" method="POST">
 
       <h1 class="mb-8 text-2xl text-center text-white" id="register">Registration</h1>
       <div class="mb-4">
-        <label for="name" class="block text-lg font-bold mb-2 text-white">
-          Full Name:
+        <label for="firstname" class="block text-lg font-bold mb-2 text-white">
+          First Name:
         </label>
         <input
           class="shadow appearance-none border rounded  py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-80 xl:w-96 md:w-96"
-          id="name" type="text" placeholder="Full Name" required name="name">
+          id="firstname" type="text" placeholder="First Name" required name="firstname">
       </div>
 
       <div class="mb-4">
-        <label for="company" class="block text-lg font-bold mb-2 text-white">
-          Company:
+        <label for="lastname" class="block text-lg font-bold mb-2 text-white">
+          Last Name:
         </label>
         <input
           class="shadow appearance-none border rounded  py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-80 xl:w-96 md:w-96"
-          id="company" type="text" placeholder="Company" required name="company">
+          id="lastname" type="text" placeholder="Last Name" name="lastname" required>
       </div>
 
       <div class="mb-4">
@@ -131,6 +129,17 @@
       </div>
 
       <div class="mb-4">
+        <label for="company" class="block text-lg font-bold mb-2 text-white">
+          Company:
+        </label>
+        <input
+          class="shadow appearance-none border rounded  py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-80 xl:w-96 md:w-96"
+          id="company" type="text" placeholder="Company" required name="company">
+      </div>
+
+
+
+      <div class="mb-4">
         <label for="phone" class="block text-lg font-bold mb-2 text-white">
           Contact Number:
         </label>
@@ -141,29 +150,22 @@
 
       <div class="mb-4">
         <label for="email" class="block text-lg font-bold mb-2 text-white">
-          Company Email:
+          Email Address:
         </label>
         <input
           class="shadow appearance-none border rounded  py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-80 xl:w-96 md:w-96"
-          id="email" type="text" placeholder="Company Email" required name="email">
-      </div>
-      <div class="mb-4">
-        <label for="invitation" class="block text-lg font-bold mb-2 text-white">
-          Invitation Received From:
-        </label>
-        <input
-          class="shadow appearance-none border rounded  py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-80 xl:w-96 md:w-96"
-          id="invitation" type="text" placeholder="Invitation Received From" name="invitation" required>
+          id="email" type="text" placeholder="Email Address" required name="email">
       </div>
 
-      <div class="mb-4">
+
+      <!-- <div class="mb-4">
         <label for="iot" class="block text-lg font-bold mb-2 text-white">
           Areas Of Interest Within IoT:
         </label>
         <input
           class="shadow appearance-none border rounded  py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-80 xl:w-96 md:w-96"
           id="iot" type="text" placeholder="Areas Of Interest Within IoT" name="iot" required>
-      </div>
+      </div> -->
 
       <div>
         <input type="checkbox" required>

@@ -41,13 +41,12 @@ mongoose.connect(mongo_URI, {
     });
 
 const dataSchema = new mongoose.Schema({
-    name: String,
+    firstname: String,
+    lastname: String,
     email: String,
     phone: String,
     company: String,
     designation: String,
-    invitation: String,
-    iot: String,
     submissionTime: String,
 });
 
@@ -59,18 +58,17 @@ console.log('database data', Data);
 
 
 app.post('/send-email', (req, res) => {
-    const { name, email, phone, company, designation, invitation, iot } = req.body;
+    const { firstname,lastname, email, phone, company, designation } = req.body;
 
     const submissionTime = DateTime.now().setZone('Asia/Kolkata').toISO();
 
     const newData = new Data({
-        name: name,
+        firstname: firstname,
+        lastname: lastname,
         email: email,
         phone: phone,
         company: company,
         designation: designation,
-        invitation: invitation,
-        iot: iot,
         submissionTime: submissionTime,
     });
     // res.sendFile(path.join(__dirname, 'display.html'));
@@ -119,7 +117,7 @@ app.post('/send-email', (req, res) => {
         to: 'rohitstories1@gmail.com',
 
         subject: 'Meeting Invitation',
-        text: `Hello ${name},\n\nThank you for reaching out to us. We have received your contact information:\nEmail: ${email}\nPhone: ${phone}\n\nBest regards,\nYour Company`,
+        text: `Hello,\n\nThank you for reaching out to us. We have received your contact information:\nEmail: ${email}\nPhone: ${phone}\n\nBest regards,\nYour Company`,
         attachments: [
             {
                 filename: 'invite.ics',
